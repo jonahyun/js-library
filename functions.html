@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Funcitons</title>
+</head>
+<body>
+<script>
+
+//Function Declaration
+
+function greet(firstName = 'Jon', lastName = 'Doe') { // es6 you can have defaults as part of parameter
+    return 'Hello ' + firstName + lastName; 
+}
+console.log(greet('Jon', 'Doe'));
+
+
+//Function Expression
+
+const square = function(x = 3) {
+    return x*x;
+};
+console.log(square());
+
+
+//IMMEDIATELY INVOCABLE FUNCTION EXPRESSIONS - IIFE
+(function() {
+    console.log("IIFE Ran")
+})();
+
+// you can pass parameters
+(function(name){
+    console.log("hello " + name)
+})('brad');
+
+
+// PROPERTY METHODS
+// When a function is inside of an object, it's called a method
+
+const todo = {
+    add: function() {
+        console.log('add to do');
+    }, 
+    edit: function(id) {
+        console.log(`Edit todo ${id}`);
+    }
+}
+
+todo.delete = function() {
+    console.log('Delete todo...');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
+
+</script>
+</body>
+</html>
