@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Loops and Interations</title>
+</head>
+<body>
+<script>
+
+
+function line() {
+    return console.log('--------------------- break ----------------------');
+}
+
+line();
+
+// FOR LOOP
+for(let i = 0; i < 10; i++) {
+
+    if(i === 2) {
+        console.log('2 is my favorite number');
+        continue;
+    }
+
+    if(i === 5) {
+        console.log('stop the loop');
+        break;
+    }
+
+    console.log('Number ' + i);
+}
+
+
+
+// WHILE LOOP
+let i = 0;
+while(i < 10) {
+    console.log('Number' + i);
+    i++;
+}
+
+line();
+
+// DO WHILE - it will run at least once
+
+let k = 0;
+do {
+    console.log('Number' + k);
+    k++;
+ } 
+ while(k < 10);
+
+line();
+
+
+// SETUP Arrays
+const cars = ['Ford', 'chevy', 'honda', 'toyota'];
+
+    // LOOP THROUGH ARRAYS
+    for(let m = 0; m < cars.length; m++) {
+        console.log(cars[m]);
+    }
+
+    line();
+
+    // FOREACH - Use forEach if you are trying to loop through an array.
+    cars.forEach(function(car){
+        console.log(car);
+    });
+
+    line();
+
+    // FOREACH - Use forEach if you are trying to loop through an array.
+    cars.forEach(function(car){
+        console.log(car);
+    });
+
+    line();
+
+    cars.forEach(function(car, index, array){
+        console.log(`${index} : ${car}`);
+        console.log(array);
+    });
+
+
+line();
+
+// MAP - return a different array
+const users = [
+    {id:1, name: 'John'},
+    {id:2, name: 'Sara'},
+    {id:3, name: 'Karen'}
+];
+
+const ids = users.map(function(user){
+    return user.id;
+});
+console.log(ids);
+
+
+line();
+
+// FOR IN LOOP
+const user = {
+    firstName: 'bobby',
+    lastName: 'doe',
+    age: 40
+}
+
+for(let x in user) {
+    console.log(`${x} : ${user[x]}`);
+}
+
+</script>
+</body>
+</html>
